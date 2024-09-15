@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(white,rgba(145, 45, 93, 0.96)); 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+header {
+    background-color: white;
+    padding: 20px 20px;
+    width: 100%;
+    text-align: center;
+    color: maroon;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 250px;
+    height: auto;
+}
+
+.container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-color: rgba(130, 31, 94, 0.96);
+    padding: 12px 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 50px;
+    background:  rgba(255, 255, 255, 0.952);
+    border-radius: 8px;
+    border: none;
+    color: rgba(130, 31, 94, 0.96);
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color:rgba(130, 31, 94, 0.438);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color:rgba(146, 46, 94, 0.96);
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 150px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}

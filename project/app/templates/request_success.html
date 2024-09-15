@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Successful</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Request Submitted Successfully</h1>
+        <p class="text-center">Thank you, {{ form_data.name }}! Your request for a {{ form_data.certificate_type }} has been received. We will process it shortly.</p>
+    </div>
+</body>
+</html>

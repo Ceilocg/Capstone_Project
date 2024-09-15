@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Management</title>
+    <link rel="stylesheet" href="{% static 'css/user_management.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/vbbnhs_logo.png' %}" alt="Logo" class="logo">
+        <h1>User Management</h1>
+    </header>
+
+    <div id="addUserForm">
+        <h2>Add New User</h2>
+        {% if form.errors %}
+            <div class="alert alert-danger">
+                <ul>
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="button-container">
+                <button class="btn-toggle">Add New User</button>
+            </div>
+        </form>
+    </div>
+
+    <h2>Existing Users</h2>
+
+    <!-- User List Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+
+                <th>Actions</th> <!-- New column for update/delete actions -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>
+                        <!-- Update and Delete buttons -->
+                        <button onclick="updateUser('{{ user.id }}')" class="btn-update">Update</button>
+                        <form action="{% url 'delete_user' user.id %}" method="post" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn-delete">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        function updateUser(userId) {
+            window.location.href = `/update_user/${userId}/`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate Requests</title>
+    <link rel="stylesheet" href="{% static 'css/user_management.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Submitted Certificate Requests</h1>
+    </header>
+
+    <h2>Requests</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>LRN</th>
+                <th>Certificate Type</th>
+                <th>Request Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for request in requests %}
+                <tr>
+                    <td>{{ request.name }}</td>
+                    <td>{{ request.email }}</td>
+                    <td>{{ request.lrn }}</td>
+                    <td>{{ request.certificate_type }}</td>
+                    <td>{{ request.request_purpose }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

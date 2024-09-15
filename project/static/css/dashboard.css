@@ -1,0 +1,127 @@
+body {
+    background: linear-gradient(white,rgba(145, 45, 93, 0.96)); 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Clean font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: white;
+    padding: 10px 20px; 
+    width: 100%; 
+    color: maroon;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+header .logo {
+    max-width: 40px; 
+    height: auto;
+    margin-right: 20px; 
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px; 
+    align-items: center;
+    margin-left: auto; 
+}
+
+.header-buttons a { 
+    border: none;
+    color: maroon;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block; 
+}
+
+.header-buttons a:hover {
+    background-color: #dc88b881; 
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    margin-top: 80px; 
+}
+
+.sidebar {
+    flex: 0 0 200px; 
+    background: linear-gradient(white,rgba(145, 45, 93, 0.96)); 
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    height: calc(100vh - 80px); 
+    overflow-y: auto;
+}
+
+.btn-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.btn {
+    display: block;
+    width: 90%;
+    text-align: left;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 10px;
+    transition: background-color 0.2s, color 0.2s;
+    text-decoration: none;
+}
+
+.btn-outline-primary {
+    color: maroon;
+    border: 1px solid #ee227700;
+    background-color: #f05fa300;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ff6fbe6f;
+    color: maroon;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: rgba(122, 40, 80, 0.96); 
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    color: white; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}

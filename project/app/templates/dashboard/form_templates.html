@@ -1,0 +1,43 @@
+<!-- form_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Files</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Available Excel Files</h1>
+        
+        <!-- Table to display Excel files -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Uploaded At</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for excel_file in excel_files %}
+                    <tr>
+                        <td>{{ excel_file.name }}</td>
+                        <td>{{ excel_file.uploaded_at }}</td>
+                        <td><a href="{% url 'download_excel_file' excel_file.pk %}" class="btn btn-primary">Download</a></td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="3">No files available.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

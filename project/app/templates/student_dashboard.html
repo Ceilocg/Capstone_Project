@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/student_dashboard.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <img src="{% static 'images/vbbnhs_logo.png' %}" alt="Logo" class="logo">
+                <h3>Request a Certificate</h3>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.name.label_tag }}
+                        {{ form.name }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.email.label_tag }}
+                        {{ form.email }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.lrn.label_tag }}
+                        {{ form.lrn }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.certificate_type.label_tag }}
+                        {{ form.certificate_type }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.request_purpose.label_tag }}
+                        {{ form.request_purpose }}
+                    </div>
+                    <div class="btn-primary-container">
+                        <button type="submit" class="btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

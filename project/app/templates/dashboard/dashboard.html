@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dashboard{% endblock %}</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/vbbnhs_logo.png' %}" alt="Logo" class="logo">
+        <h1>Dashboard</h1>
+        <div class="header-buttons">
+            <a href="{% url 'settings' %}" class="btn btn-secondary">Settings</a>
+            <a href="{% url 'notifications' %}" class="btn btn-secondary">Notifications</a>
+            <a href="{% url 'index' %}" class="btn btn-secondary">Home</a>
+            <a href="{% url 'about' %}" class="btn btn-secondary">About</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="btn-group-vertical">
+                <a href="{% url 'user_management' %}" class="btn btn-outline-primary">User Management</a>
+                <a href="{% url 'form_templates' %}" class="btn btn-outline-primary">Form Templates</a>
+                <a href="{% url 'data_management' %}" class="btn btn-outline-primary">Data Management</a>
+            </div>
+        </div>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Valentina B. Boncan National High School. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

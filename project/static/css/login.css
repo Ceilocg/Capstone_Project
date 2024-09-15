@@ -1,0 +1,111 @@
+body {
+    background: linear-gradient(white,rgba(145, 45, 93, 0.96)); 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Clean font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: white;
+    padding: 10px 20px; 
+    width: 100%; 
+    color: maroon;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 1000; 
+    display: center;
+    text-align: center;
+    align-items: center; 
+
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.logo {
+    max-width: 150px;
+    margin-top: 8%;
+    padding: 1px; 
+    margin-bottom: 10px; 
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.login-form {
+    background-color: #fff; 
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px auto; 
+    max-width: 320px;
+    border: 1px solid #e1e1e1; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.login-form .form-control {
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 20px;
+    box-sizing: border-box; 
+    font-size: 16px;
+    width: 100%;
+}
+
+.textarea.form-control {
+    resize: none;
+}
+
+
+.login-form .btn {
+    border-radius: 8px;
+    padding: 12px 24px;
+    background-color:  rgba(145, 45, 93, 0.96);
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    width: 100%; 
+}
+
+.login-form .btn:hover {
+    background-color: #2980b9; 
+    transform: translateY(-3px); 
+}
+
+.login-form a {
+    color: #ee2996;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgba(122, 40, 80, 0.96);
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    color: white; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
