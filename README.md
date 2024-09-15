@@ -1,4 +1,4 @@
-# Django Project Setup and Commands
+# Django Commands
 
 ## Common Django Commands
 
